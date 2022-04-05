@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		table {
+			margin: auto;
+			width: 200px;
+			height: 200px;
+			border: 1px solid #444444;
+			
+		}
+    </style>
+    <link rel="icon" href="data:;base64,iVBORwokGo=">
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td align="center"><a href="main2.html"><input type="button" value="home"></a></td>
+            </tr>
+            <tr>
+                <td align="center"><a href="modiJoinInfo.html"><input type="button" value="회원정보 수정"></a></td>
+            </tr>
+
+            <tr>
+                <td align="center"><a href="myplace.html"><input type="button" value="등록한 여행지"></a></td>
+            </tr>
+            <tr>
+            	<td align="center"><a id="gomain"><button type="button" onclick="deleteuser()">회원탈퇴</button></a></td>
+            </tr>
+        </table>
+    </form>   
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../common.js"></script>
+<script src="../delMember.js"></script>
+</html>

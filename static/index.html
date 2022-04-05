@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORwokGo=">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">	<style>
+		li:hover{
+			color:#6495ED;
+			cursor:pointer;
+		}
+		ul, li {
+			margin: 10px 0;
+		}
+		body {
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body>
+	<form id="mainform" style="margin: auto;"></form>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand">travel</a>
+				<a class="navbar-text" href="login.html">로그인</a>
+			</div>
+		</nav>
+		<h1 class="h1 mb-5 fw-bold mx-auto" style="margin-top: 7%;">wannaTravel</h1>
+		<div class="input-group mb-3 mx-auto" style="width: 50%;">
+				<select class="form-select" name="지역" id="area" onchange="changeDistrict()">
+					<option value="">지역</option>
+					<option value="Seoul">서울특별시</option>
+					<option value="Busan">부산광역시</option>
+					<option value="Daegu">대구광역시</option>
+					<option value="Incheon">인천광역시</option>
+					<option value="Gwangju">광주광역시</option>
+					<option value="Daejeon">대전광역시</option>
+					<option value="Ulsan">울산광역시</option>
+					<option value="Sejong">세종특별자치시</option>
+					<option value="Gyeonggi-do">경기도</option>
+					<option value="Gangwon-do">강원도</option>
+					<option value="Chungcheongbuk-do">충청북도</option>
+					<option value="Chungcheongnam-do">충청남도</option>
+					<option value="Jeollabuk-do">전라북도</option>
+					<option value="Jeollanam-do">전라남도</option>
+					<option value="Gyeongsangbuk-do">경상북도</option>
+					<option value="Gyeongsangnam-do">경상남도</option>
+					<option value="Jeju-do">제주특별자치도</option>
+				</select>
+				<select class="form-select" name="구역" id="district">
+					<option value="">행정구역</option>
+				</select>
+				<input type="text" id="placeName" class="input-group-text" placeholder="여행지명" style="width: 200px;">
+				<button type="button" class="btn btn-secondary" onclick="showList()">검색</button>
+		</div>
+		<div class="p-3 bg-light text-black mb-3 mx-auto" style="width: 50%;">
+			<div id="searchList" class="fw-bold" style="margin-bottom:10px; font-weight: bold; "></div>
+			<ul id="list"></ul>	
+		</div>
+
+	</form>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../changeDistrict.js"></script>
+<script src="../common.js"></script>
+<script src="../search.js"></script>
+</html>

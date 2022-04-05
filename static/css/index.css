@@ -1,0 +1,8 @@
+li:hover{
+    color:#6495ED;
+    cursor:pointer;
+}
+table {
+    width: 40%;
+    margin: auto;
+}

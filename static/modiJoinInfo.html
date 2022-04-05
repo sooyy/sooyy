@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보수정</title>
+    <style>
+    	table {
+    		margin: auto;
+    		height: 300px;
+    		border: 1px solid;
+    	}
+    </style>
+    <link rel="icon" href="data:;base64,iVBORwokGo=">
+</head>
+<body>
+    <form id="joinform">
+        <table border="2">
+            <tr>
+                <td><h2>회원정보수정</h2></td>
+            </tr>
+            <tr>
+                <td>아이디 : <span id="memId"></span></td>
+            </tr>
+            <tr>
+                <td>비밀번호 : <input type="password" id="memPw"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 재확인 : <input type="password" id="reMemPw"></td>
+            </tr>
+            <tr>
+                <td>이름 : <span id="memName"></span></td>
+            </tr>
+            <tr>
+                <td>생년월일 : 
+                    연도 [4자리] <input type="number" id="year" min=1930>
+                    월 <input type="number" id="month" min=1 max=12>
+                    일 <input type="number" id="day" min=1 max=31>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    전화번호 : <input type="text" id="phoneNumber"> ['-'을 포함하여 입력해주세요.]
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <a href="mypage.html"><input type="button" value="취소"></a>
+                    <a id="modibtn"><input type="button" value="수정" class="modibutton" onclick="check()"></a>
+                </td>
+            </tr>
+            <tr></tr>
+        </table>
+    </form>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../common.js"></script>
+<script src="../modiJoinInfo.js"></script>
+</html>

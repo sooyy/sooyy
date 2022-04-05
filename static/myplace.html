@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록한여행지</title>
+    <style>
+		table {
+			margin: auto;
+			height: 300px;
+			border: 1px solid;
+			
+		}
+    	#nullPlace {
+    		color: #a9a9a9;
+    	}		
+    </style>
+    <link rel="icon" href="data:;base64,iVBORwokGo=">
+</head>
+<body>
+    <form>
+        <table border="2">
+            <tr>
+                <td colspan="3"><h2>내가 등록한 여행지</h2></td>
+            </tr>
+            <tr>
+                <td colspan="3" id="list" style="vertical-align: top; height:200px;"><span id="nullPlace"></span></td>
+            </tr>
+            <tr>
+            	<td>
+	                <a href="mypage.html"><input type="button" value="취소"></a>
+	                <a href="enroll_place.html"><input type="button" value="새로운 여행지 등록"></a>
+	                <a id="remyplace"><input type="button" value="삭제" onclick="deleteplace()"></a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../common.js"></script>
+<script src="../deletePlace.js"></script>
+</html>

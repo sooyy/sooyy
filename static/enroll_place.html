@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여행지등록</title>
+    <style>
+    	table {
+    		margin: auto;
+    		height: 300px;
+    		border: 1px solid;
+    	}
+    </style>
+    <link rel="icon" href="data:;base64,iVBORwokGo=">
+</head>
+<body>
+	<form name="enrollform" method="post" action="enrollsuccess" onsubmit="false">
+		<table border="2">
+			<tr>
+				<td>새로운 여행지 등록</td>
+			</tr>
+			<tr>
+				<td>여행지명 : <input type="text" id="placeName"></td>
+			</tr>
+			<tr>
+				<td>주소 : <span> <select name="지역" id="area"
+						onchange="changeDistrict(area.value)">
+							<option value="">지역</option>
+							<option value="Seoul">서울특별시</option>
+							<option value="Busan">부산광역시</option>
+							<option value="Daegu">대구광역시</option>
+							<option value="Incheon">인천광역시</option>
+							<option value="Gwangju">광주광역시</option>
+							<option value="Daejeon">대전광역시</option>
+							<option value="Ulsan">울산광역시</option>
+							<option value="Sejong">세종특별자치시</option>
+							<option value="Gyeonggi-do">경기도</option>
+							<option value="Gangwon-do">강원도</option>
+							<option value="Chungcheongbuk-do">충청북도</option>
+							<option value="Chungcheongnam-do">충청남도</option>
+							<option value="Jeollabuk-do">전라북도</option>
+							<option value="Jeollanam-do">전라남도</option>
+							<option value="Gyeongsangbuk-do">경상북도</option>
+							<option value="Gyeongsangnam-do">경상남도</option>
+							<option value="Jeju-do">제주특별자치도</option>
+					</select>
+				</span> <span> <select name="구역" id="district">
+							<option value="">행정구역</option>
+					</select>
+				</span> <input type="text" name="search" placeholder="상제주소"
+					id="detailAddress">
+				</td>
+			</tr>
+			<tr>
+				<td>테마 : <select name="테마" id="theme">
+						<option value="">선택</option>
+						<option value="문화/예술">문화/예술</option>
+						<option value="쇼핑/놀이">쇼핑/놀이</option>
+						<option value="자연/힐링">자연/힐링</option>
+						<option value="종교/역사/전통">종교/역사/전통</option>
+						<option value="체험/학습/산업">체험/학습/산업</option>
+						<option value="캠핑/스포츠">캠핑/스포츠</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>키워드 : <input type="text" id="tag"> <br> <span>
+						* '#tag' 형태로 입력해주세요. (ex) #강아지#고양이</span> <br> <span>* 키워드는
+						3개까지만 입력가능합니다. </span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<fieldset>
+						<legend>소개글</legend>
+						<textarea name="introduce" cols="30" rows="10" id="introduce"></textarea>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" name="img" id="placeImg"> <br>
+					* 여행지 사진 주소를 입력해주세요.(ex)http://xxxx/xxx</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<a href="mypage.html"><input type="button" value="취소"></a>
+					<a id="gobtn"><input type="button" value="등록" onclick="check()"></a>
+				</td>
+			</tr>
+		</table>
+
+	</form>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>	
+<script src="../changeDistrict.js"></script>
+<script src="../specific_selected.js"></script>
+<script src="../common.js"></script>
+<script src="../enrollplace.js"></script>
+</html>
