@@ -8,14 +8,18 @@ let newDay = $("#day");
 let phoneNumber = $("#phoneNumber");
 
 // 아이디 출력
-$("#memId").html(userId);
+//$("#memId").html(userId);
+$("#memId").attr("placeholder",userId);
+$("#memId").attr("disabled","");
 
 $.ajax({
 	type:"GET",
 	url : API_SERVER_URL_PRIVATE + '/' + userId,
 	dataType: "json",
 	success: function(data){
-		$("#memName").html(data.userName);
+		//$("#memName").html(data.userName);
+		$("#memName").attr("placeholder",data.userName);
+		$("#memName").attr("disabled","");
 		let birth = new Date(data.birth);
 		let year = birth.getFullYear();
 		let month = birth.getMonth();

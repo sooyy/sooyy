@@ -33,9 +33,25 @@ function enrollReview(){
 	            placeNumber: pnum,
 	            reviewContent: $("#writeReview").val()
 			}
-			postData(url,obj);
-			$("#writeReview").val("");
-			window.location.reload();	
+			//postData(url,obj);
+			//$("#writeReview").val("");
+			//window.location.reload();	
+			$.ajax({
+				type: "POST",
+				url: url,
+				contentType: 'application/json',
+				data: JSON.stringify(obj),
+				dataType: "JSON",
+				success: function(res){
+					console.log(res);
+					$("#writeReview").val("");
+					window.location.reload();
+				},
+				error: function(){
+					console.log("POST/UPDATE ajax 호출 오류");
+				}
+			})	
+
 		}	
 	}
 }

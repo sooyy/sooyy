@@ -23,12 +23,12 @@
 <body>
 	<form id="mainform" style="margin: auto;"></form>
 		<nav class="navbar navbar-dark bg-dark">
-			<div class="container-fluid">
+			<div class="container-fluid" style="margin: 10px;">
 				<a class="navbar-brand">travel</a>
-				<a class="navbar-text" href="login.html">로그인</a>
+				<a class="navbar-text" href="login.html">Login</a>
 			</div>
 		</nav>
-		<h1 class="h1 mb-5 fw-bold mx-auto" style="margin-top: 7%;">wannaTravel</h1>
+		<h1 class="h1 mb-5 fw-bold mx-auto" style="margin-top: 7%;">WANNATRAVEL</h1>
 		<div class="input-group mb-3 mx-auto" style="width: 50%;">
 				<select class="form-select" name="지역" id="area" onchange="changeDistrict()">
 					<option value="">지역</option>
@@ -53,7 +53,7 @@
 				<select class="form-select" name="구역" id="district">
 					<option value="">행정구역</option>
 				</select>
-				<input type="text" id="placeName" class="input-group-text" placeholder="여행지명" style="width: 200px;">
+				<input type="text" id="placeName" class="input-group-text" placeholder="여행지명" style="width: 360px;">
 				<button type="button" class="btn btn-secondary" onclick="showList()">검색</button>
 		</div>
 		<div class="p-3 bg-light text-black mb-3 mx-auto" style="width: 50%;">
@@ -64,7 +64,7 @@
 	</form>
 </body>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="../changeDistrict.js"></script>
-<script src="../common.js"></script>
-<script src="../search.js"></script>
+<script src="../js/changeDistrict.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/search.js"></script>
 </html>

@@ -39,6 +39,7 @@ function userWeather(position){
 		}
 	})    
 }
+
 function userWeatherError(){
     alert("사용자의 위치를 찾을 수 없습니다.");
 }

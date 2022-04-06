@@ -10,7 +10,7 @@ $.ajax({
 			return false;
 		}else{
 			for(let count = 0; count < data.length; count++){
-				let div = `<div id=div_${data[count].placeNumber}>` + `<input type=checkbox value=${data[count].placeNumber}>`+ data[count].placeName + "</input>" +"</div>";
+				let div = `<div id=div_${data[count].placeNumber} class="input-group-text" style="margin:10px;">` + `<input type=checkbox value=${data[count].placeNumber}>`+ data[count].placeName + "</input>" +"</div>";
 				$("#list").append(div);
 			}
 		}

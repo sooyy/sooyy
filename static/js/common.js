@@ -1,4 +1,5 @@
-const API_SERVER_URL = "http://localhost:39294";
+//const API_SERVER_URL = "http://localhost:39294";
+const API_SERVER_URL = "http://qiip.quantum-ai.kr:39294";
 const API_SERVER_URL_PRIVATE = API_SERVER_URL + "/user/private"
 const API_SERVER_URL_PUBLIC = API_SERVER_URL+"/user/public"
 const API_SERVER_URL_TAG = API_SERVER_URL+"/tag"
@@ -30,9 +31,6 @@ function deleteData(url){
 		url: url,
 		dataType: "JSON",
 		success: function(result){console.log(result);},
-		error: function(){
-			console.log("DELETE ajax 호출 오류");
-		}
 	})
 }
 
